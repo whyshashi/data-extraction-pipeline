@@ -32,9 +32,9 @@ def generate_insights_from_csv(filepath,outputpath):
     """
     
     # Set up the Gemini API using the new SDK client
-    api_key = os.environ.get("GEMINI_API_KEY")
+    api_key = os.environ.get("GOOGLE_API_KEY")
     if not api_key:
-        raise ValueError("Error: Please set your GEMINI_API_KEY environment variable.")
+        raise ValueError("Error: Please set your GOOGLE_API_KEY environment variable.")
         
     # Initialize the new client
     client = genai.Client(api_key=api_key)
