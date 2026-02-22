@@ -1,6 +1,6 @@
 #  Python extract, clean, visualize Pipeline (Tabula-Based)
 
-This project implements a simple **ETL (Extract, Transform, Load)**
+This project implements a simple **(Extract, clean, Plot)**
 pipeline in Python using **Tabula** to extract tables from PDF files and
 process them.
 
