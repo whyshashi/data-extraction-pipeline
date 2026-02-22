@@ -1,3 +1,28 @@
+"""
+Financial Data Visualization Module
+====================================
+
+This module provides utilities for creating visualizations of financial data,
+specifically designed for analyzing segment profitability and consolidated
+financial metrics.
+
+Functions:
+    - clean_financial_numbers(val): Cleans financial data by removing currency
+      symbols, handling negative values, and converting to numeric format
+    - createGraph(): Generates segment-level profit comparison charts and
+      year-over-year growth analysis
+    - createGraph_consolidated(): Creates visualizations for consolidated
+      financial metrics including revenue, charges, and profit
+
+The module processes CSV data from the outputs directory and generates PNG
+visualizations that are saved for reporting and analysis purposes.
+
+Dependencies:
+    - pandas: Data manipulation and CSV reading
+    - numpy: Numerical operations
+    - matplotlib: Chart and graph creation
+"""
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt

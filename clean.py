@@ -1,3 +1,31 @@
+"""
+Data Cleaning Module
+
+This module provides functions to clean and standardize CSV data extracted from PDF tables.
+It handles data extracted from Tabula and performs the following operations:
+
+Functions:
+    - clean_csv(): Processes segment table data from Tabula extractions
+      * Removes messy headers (first 5 rows)
+      * Extracts and cleans category names (removes footnote markers)
+      * Processes financial values and removes thousands separators
+      * Splits combined financial metrics into separate columns
+      * Outputs cleaned data with standardized headers: Category, Note, 2021 $m, 2020 AER $m, 
+        2020 CER $m, 2021 vs 2020 AER %, 2021 vs 2020 CER %
+
+    - clean_consolidated_csv(): Processes consolidated financial table data
+      * Loads CSV data with financial metrics across years
+      * Removes currency symbols and cleans numeric values
+      * Handles negative numbers in parentheses format
+      * Filters out header-like rows that appear mid-table
+      * Assigns appropriate units ($m for monetary values, cents for EPS)
+      * Outputs standardized format with columns: Item, Note, 2021, 2020, Unit
+
+Input/Output:
+    - Reads from: ./outputs/segment_table/ and ./outputs/consolidated_table/ directories
+    - Writes cleaned CSV files to the same directories with 'cleaned_' prefix
+"""
+
 import csv
 import re
 import pandas as pd

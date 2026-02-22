@@ -1,3 +1,28 @@
+"""
+LLM-Generated Insights Module
+
+This module provides functionality to analyze financial data from CSV files using Google's 
+Gemini API and generate meaningful business insights. It performs variance analysis, 
+examines margin and profitability trends, and identifies exceptional items that impact 
+financial results.
+
+Key Features:
+- Reads financial data from CSV files
+- Analyzes year-over-year and period-over-period changes
+- Generates data-driven business insights with specific metrics and percentages
+- Integrates with Google Gemini LLM for intelligent analysis
+- Outputs insights to text files for reporting and documentation
+
+Dependencies:
+- pandas: Data manipulation and CSV reading
+- google.genai: Google Gemini API client (updated SDK)
+- python-dotenv: Environment variable management
+
+Usage:
+    from llmgenerated_insights import generate_insights_from_csv
+    insights = generate_insights_from_csv('data.csv', 'outputs/insights.txt')
+"""
+
 import pandas as pd
 from google import genai  # Updated import for the new SDK
 import os

@@ -1,3 +1,25 @@
+"""
+Module: clean_col.py
+
+Purpose:
+    Cleans financial data from segment results by converting accounting format numbers
+    (such as '(123)' for negative values and percentages) into standard numeric formats.
+
+Functions:
+    - clean_financial_numbers_deep(val): Converts accounting-formatted strings to floats
+    - clean_dataframe(): Reads segment results CSV, applies cleaning to financial columns,
+                        and saves the cleaned data
+
+Input:
+    - Source: ./outputs/segment_table/cleaned_segment_results.csv
+    
+Output:
+    - Destination: ./outputs/segment_table/clean_final.csv
+
+Cleaned Columns:
+    - 2021 $m, 2020 AER $m, 2020 CER $m, 2021 vs 2020 AER %, 2021 vs 2020 CER %
+"""
+
 import pandas as pd
 import numpy as np
 
